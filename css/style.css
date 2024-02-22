@@ -390,7 +390,320 @@ img {
     .family-img img{
         height: 370px;
         width: auto;
+    }    
+}
+
+
+/*Mobile screen*/
+
+@media screen and (max-width: 768px) {
+    .showcase {
+        width: 100%;
+        height: 58vh;
+        position: relative;
+        background: url("../img/background.jpg");
+    }
+    
+    /*img background shadow*/
+    .showcase::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        box-shadow: inset 0 10px 100px #000000, inset -0.5px -60px 150px #000000;
+    }
+    
+    .showcase-top {
+        position: relative;
+        z-index: 2; /*con esta orden ponemos delante del filtro after lo que este en este div (la position debe ser relative)*/
+        height: 50px;
+    }
+    
+    .showcase-top img {
+        width: auto;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(15%,-40%);
+        
+    }
+    
+    .showcase-top a {
+        font-size: 13px;
+        position: absolute;
+        top: 30%;
+        padding: 6px 13px;
+        right: 0;
+        transform: translate(-10%,0%);
+    }
+    
+    .showcase-content {
+        position: relative;
+        z-index: 2;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .showcase-content h1 {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 1;
+        margin: 2rem 1.6rem 0 1.6rem;
+    
+    }
+    
+    .showcase-content p {
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin: 10px 50px;
+    
+    
+    }
+    
+    /* Forms */
+    .form form{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    
+    .box-email{
+        background-color: #141414a2;
+        font-size: large;
+        color: #fff;
+        padding:  15px 60px 15px 15px;
+        text-align: left;
+        border-color: #c5c2c2;
+        border-width: 1px;
+        border-radius: 5px;
     }
     
     
+    /* Buttons */
+    .btn {
+        display: flex;
+        background: var(--primary-color);
+        color: #fff;
+        padding: 0.5rem 0.8rem;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        outline: none;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+        border-radius: 5px;
+    }
+    
+    .btn:hover {
+        opacity: 0.9;
+    }
+    
+    .btn-rounded {
+        border-radius: 5px;
+    }
+    
+    .btn-xl {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+    
+    .container h1{
+        position: sticky;
+        background-color: #3f3e3e;
+        color: #3f3e3e;
+        font-size: 7.5px;
+       
+    }
+    
+    .tv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 8%;
+    }
+    
+    
+    .tv-text {
+        font-size: 1.1rem;
+        
+    }
+    
+    .tv-text h1 {
+        font-weight: bold;
+        line-height: 50px;
+    }
+    
+    .tv-text p {
+        line-height: 20px;
+        font-size: 0.9rem;
+    }
+    
+    .tv-img {
+        margin-left: 22%;
+    }
+
+    .tv-img img{
+        height: 220px;
+        width: auto;
+    }
+    
+    .device-img {
+        margin: 0 0 20px 40px;
+    }
+    
+    .device-img img {
+        height: 250px;
+        width: auto;
+    }
+    
+    .cel, .family {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 8%;
+    }
+    
+    .cel-text {
+        font-size: 1.1rem;
+    }
+    
+    .cel-text h1{
+        font-weight: bold;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .cel-text p, .family p {
+        line-height: 15px;
+        font-size: 0.9rem;
+    }
+
+    .cel-img, .family-img {
+        margin: 0;
+    }
+    
+    .cel-img img{
+        height: 220px;
+        width: auto;
+        margin-right: 46px;
+        margin-bottom: 20px;
+    }
+    
+    .family-text {
+        font-size: 1rem;
+    }
+    
+    .family-img img{
+        height: 220px;
+        width: auto;
+        margin-right: 20px;
+    }
+    
+    /*Contenedor Acordeon desplegable*/
+    
+    .contenedor-acordeon {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        margin-top: 50px;
+        
+    }
+    
+    .contenedor-acordeon h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+    
+    .acordeon {
+        background: #000;
+        margin-bottom: 5px;
+    }
+    
+    .contenido-acordeon {
+        background: #333333;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .acordeon label {
+        display: block;
+        padding: 18px;
+        font-size: 15px;
+        background: #333333;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 1px;
+        transition: all 300ms ease;
+    }
+    
+    .acordeon label:hover {
+        background: #444444;
+    }
+    
+    .acordeon .contenido-acordeon {
+        padding: 0px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 300ms ease;
+    }
+    
+    .btn-acordeon:checked ~ .contenido-acordeon{
+        max-height: 600px;
+        padding: 15px 15px;
+    }
+    
+    .btn-acordeon{
+        display: none;
+    }
+    
+    /*Footer*/
+    
+    .footer-title {
+        font-size: 13px;
+        margin: 3% 15% 0 10%;
+        display: grid;
+    }
+    
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin:  2% 15% 3% 10%;
+    }
+    
+    .footer-links p {
+        font-size: 12px;
+        text-decoration: underline;
+        margin-bottom: 15px;
+    }
+    
+    .footer-end {
+        font-size: 10px;
+        margin-left: 10%;
+    }
+
+    .footer-end p, .footer-end a {
+        color: #686868;
+    }
 }
